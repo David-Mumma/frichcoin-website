@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fucking Rich Coin - Official Website</title>
+  <meta name="description" content="Your future? Rich as fuck. Community-first, fast and simple. $FRICH." />
+  <!-- Social sharing -->
+  <meta property="og:title" content="Fucking Rich Coin - Official Website" />
+  <meta property="og:description" content="Your future? Rich as fuck." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/David-Mumma/frichcoin-website/main/frich_logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://frichcoin.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fucking Rich Coin - Official Website" />
+  <meta name="twitter:description" content="Your future? Rich as fuck." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/David-Mumma/frichcoin-website/main/frich_logo.png" />
+  <style>
+    :root {
+      --bg: #000; --text: #fff; --muted: rgba(255,255,255,.7);
+      --border: rgba(255,255,255,.12); --gold: #FFD700;
+      --container: 1200px;
+    }
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--container); margin-inline: auto; padding: 0 20px; }
+    .btn { display:inline-flex; align-items:center; gap:.5rem; font-weight:700; border-radius: 16px; padding:.8rem 1.1rem; border:1px solid transparent; transition: transform .15s; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background:#fff; color:#000; }
+    .btn-outline { border-color:var(--border); background:transparent; color:#fff; }
+
+    /* Navbar */
+    .nav { position: sticky; top:0; z-index:40; backdrop-filter: blur(6px); background: rgba(0,0,0,.75); border-bottom:1px solid var(--border); }
+    .nav-row { height:64px; display:flex; align-items:center; justify-content:space-between; }
+    .nav a.link { opacity:.8; font-size:.95rem; }
+    .nav a.link:hover { opacity:1; }
+    .nav .links { display:none; gap:1.25rem; align-items:center; }
+    @media (min-width: 768px) { .nav .links { display:flex; } }
+
+    /* Sections */
+    section { padding: 72px 0; }
+    .border-top { border-top:1px solid var(--border); }
+    .muted { color: var(--muted); }
+
+    /* Hero */
+    .hero { text-align:center; padding-top: 80px; padding-bottom: 96px; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin: 24px 0 0; }
+    .hero .slogan { margin-top: 18px; font-weight: 900; text-transform: uppercase; color: var(--gold);
+      font-size: clamp(1.75rem, 4.5vw, 3.2rem); letter-spacing: .5px; }
+    .pulse { animation: pulse 2.4s ease-in-out infinite alternate; }
+    @keyframes pulse { from { opacity:.35 } to { opacity:1 } }
+
+    /* Features grid */
+    .grid { display:grid; gap: 20px; }
+    @media (min-width:640px){ .grid-2 { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width:1024px){ .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+    .card { border:1px solid var(--border); background: rgba(255,255,255,.05); border-radius: 16px; padding:18px; }
+    .card:hover { background: rgba(255,255,255,.08); }
+
+    /* Tokenomics */
+    .cols { display:grid; gap:24px; }
+    @media (min-width:1024px){ .cols { grid-template-columns: 1fr 1fr; } }
+    .bar { height:8px; background: rgba(255,255,255,.14); border-radius: 999px; overflow:hidden; }
+    .bar > span { display:block; height:100%; background:#fff; border-radius:999px; }
+
+    /* Timeline */
+    .timeline { position:relative; margin-left:12px; }
+    .timeline:before { content:""; position:absolute; left:0; top:0; bottom:0; width:1px; background: rgba(255,255,255,.2); }
+    .timeline li { list-style:none; margin-left:20px; margin-bottom:22px; position:relative; }
+    .timeline li:before { content:""; position:absolute; left:-10px; top:6px; width:12px; height:12px; background:#fff; border-radius:50%; }
+
+    /* FAQ */
+    details { border-top:1px solid var(--border); }
+    details:first-of-type { border-top:0; }
+    summary { cursor:pointer; padding:14px; display:flex; justify-content:space-between; align-items:center; font-weight:600; }
+    details[open] { background: rgba(255,255,255,.05); }
+    details .answer { padding: 0 14px 14px; color: var(--muted); }
+
+    /* Footer */
+    footer { border-top:1px solid var(--border); padding: 18px 0 26px; }
+    .foot-row { display:flex; flex-direction:column; gap:14px; align-items:center; justify-content:space-between; }
+    @media (min-width:640px){ .foot-row { flex-direction:row; } }
+
+    /* Utility */
+    .center { display:grid; place-items:center; }
+    .mt-4{ margin-top:16px } .mt-6{ margin-top:24px } .mt-8{ margin-top:32px } .mt-12{ margin-top:48px }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+    .icon { width:18px; height:18px; display:inline-block; }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav-row">
+      <a href="#home" class="brand" style="display:flex;align-items:center;gap:12px">
+        <img src="https://raw.githubusercontent.com/David-Mumma/frichcoin-website/main/frich_logo.png" alt="$frich logo" style="width:36px;height:36px;object-fit:contain"/>
+        <strong>Fucking Rich Coin</strong>
+      </a>
+      <nav class="links">
+        <a class="link" href="#features">Features</a>
+        <a class="link" href="#tokenomics">Tokenomics</a>
+        <a class="link" href="#roadmap">Roadmap</a>
+        <a class="link" href="#faq">FAQ</a>
+        <a class="link" href="https://x.com/frichcoin" target="_blank" rel="noreferrer">
+          <!-- X icon -->
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2H21l-6.42 7.35L22.5 22h-6.79l-4.7-6.14L5.6 22H3l6.86-7.86L1.5 2h6.9l4.27 5.64L18.244 2Zm-1.19 18h1.94L7.02 4h-1.9l11.924 16Z"/></svg>
+          <span class="sr-only">X</span>
+        </a>
+        <a class="link" href="https://t.me/fuckingrichcoin" target="_blank" rel="noreferrer">
+          <!-- Telegram icon -->
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.036 15.803 8.9 19.395c.308 0 .442-.133.602-.292l1.445-1.387 3.004 2.203c.551.308.939.15 1.09-.507l1.974-9.256.002-.002c.176-.822-.297-1.145-.837-.944l-11.56 4.45c-.79.308-.776.753-.134.955l2.955.922 6.867-4.322c.322-.21.616-.094.374.116l-5.557 4.46Z"/></svg>
+          <span class="sr-only">Telegram</span>
+        </a>
+        <a class="btn btn-primary" href="https://frichcoin.com/buy">Buy $FRICH</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="center">
+        <img src="https://raw.githubusercontent.com/David-Mumma/frichcoin-website/main/frich_logo.png" alt="$frich logo" style="width:min(90vw, 36rem); height:auto; object-fit:contain;" />
+      </div>
+      <h1>$FRICH</h1>
+      <div class="slogan pulse">YOUR FUTURE? RICH AS FUCK.</div>
+      <div class="mt-6 center" style="gap:12px">
+        <a class="btn btn-primary" href="https://frichcoin.com/buy">Buy $FRICH</a>
+        <a class="btn btn-outline" href="https://frichcoin.com/whitepaper" target="_blank" rel="noreferrer">Whitepaper</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="border-top">
+    <div class="container">
+      <h2 style="font-size: clamp(1.8rem, 3vw, 2.25rem); font-weight:800">Why $FRICH?</h2>
+      <div class="grid grid-2 grid-3 mt-8">
+        <div class="card"><div style="font-weight:700">Community-first</div><div class="muted mt-4" style="font-size:.95rem">Transparent, meme-powered, built with and by holders.</div></div>
+        <div class="card"><div style="font-weight:700">Fast & simple</div><div class="muted mt-4" style="font-size:.95rem">Low fees, quick swaps, clean UX.</div></div>
+        <div class="card"><div style="font-weight:700">Real culture</div><div class="muted mt-4" style="font-size:.95rem">IP, collabs, events – not just hype.</div></div>
+        <div class="card"><div style="font-weight:700">Locked LP</div><div class="muted mt-4" style="font-size:.95rem">Safer trading – LP locked, open comms.</div></div>
+        <div class="card"><div style="font-weight:700">Audited</div><div class="muted mt-4" style="font-size:.95rem">External audit + open source for trust.</div></div>
+        <div class="card"><div style="font-weight:700">Ecosystem</div><div class="muted mt-4" style="font-size:.95rem">NFT drops, staking rewards, quest hub.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOKENOMICS -->
+  <section id="tokenomics" class="border-top" style="background: rgba(255,255,255,.05)">
+    <div class="container">
+      <div class="cols">
+        <div class="card">
+          <h2 style="font-size:1.6rem; font-weight:800">Tokenomics</h2>
+          <ul class="muted" style="margin:16px 0 0; padding-left: 18px; line-height:1.8">
+            <li><strong style="color:#fff">Total supply:</strong> 1,000,000,000 $FRICH</li>
+            <li><strong style="color:#fff">Tax:</strong> 0% buy / 0% sell</li>
+            <li><strong style="color:#fff">LP:</strong> 50% locked</li>
+            <li><strong style="color:#fff">Community rewards:</strong> 25%</li>
+            <li><strong style="color:#fff">Team (vesting):</strong> 10%</li>
+            <li><strong style="color:#fff">Treasury & CEX:</strong> 15%</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="font-weight:700; margin-bottom:12px">Distribution</h3>
+          <div class="muted" style="font-size:.95rem">
+            <div class="mt-6"><div class="flex" style="display:flex; justify-content:space-between"><span>Locked LP</span><span>50%</span></div><div class="bar mt-4"><span style="width:50%"></span></div></div>
+            <div class="mt-6"><div class="flex" style="display:flex; justify-content:space-between"><span>Community</span><span>25%</span></div><div class="bar mt-4"><span style="width:25%"></span></div></div>
+            <div class="mt-6"><div class="flex" style="display:flex; justify-content:space-between"><span>Treasury & CEX</span><span>15%</span></div><div class="bar mt-4"><span style="width:15%"></span></div></div>
+            <div class="mt-6"><div class="flex" style="display:flex; justify-content:space-between"><span>Team (vesting)</span><span>10%</span></div><div class="bar mt-4"><span style="width:10%"></span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" class="border-top">
+    <div class="container">
+      <h2 style="font-size: clamp(1.8rem, 3vw, 2.25rem); font-weight:800">Roadmap</h2>
+      <ol class="timeline mt-8">
+        <li>
+          <div class="card">
+            <div class="muted" style="text-transform:uppercase; font-size:.8rem">Q1</div>
+            <div style="font-weight:700">Launch & LP lock</div>
+            <p class="muted" style="font-size:.95rem; margin-top:6px">Token live, LP locked, base site, audit started.</p>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="muted" style="text-transform:uppercase; font-size:.8rem">Q2</div>
+            <div style="font-weight:700">CEX listing & NFT</div>
+            <p class="muted" style="font-size:.95rem; margin-top:6px">First CEX, NFT drop for early holders, quest hub.</p>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="muted" style="text-transform:uppercase; font-size:.8rem">Q3</div>
+            <div style="font-weight:700">Ecosystem</div>
+            <p class="muted" style="font-size:.95rem; margin-top:6px">Staking rewards, merch collab, IRL pop-ups & creator fund.</p>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="muted" style="text-transform:uppercase; font-size:.8rem">Q4</div>
+            <div style="font-weight:700">Scale</div>
+            <p class="muted" style="font-size:.95rem; margin-top:6px">Partnerships, more CEX, international events.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="border-top">
+    <div class="container">
+      <h2 style="font-size: clamp(1.8rem, 3vw, 2.25rem); font-weight:800">FAQ</h2>
+      <div class="card mt-8" style="padding:0">
+        <details>
+          <summary>Is the contract renounced?<span aria-hidden>+</span></summary>
+          <div class="answer">Specify status here or why you chose another model.</div>
+        </details>
+        <details>
+          <summary>Is liquidity locked?<span aria-hidden>+</span></summary>
+          <div class="answer">Yes – link to LP lock and time period.</div>
+        </details>
+        <details>
+          <summary>Which chain?<span aria-hidden>+</span></summary>
+          <div class="answer">Ethereum / Solana / BSC – add the smart contract address.</div>
+        </details>
+        <details>
+          <summary>Trade tax?<span aria-hidden>+</span></summary>
+          <div class="answer">0% buy / 0% sell.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot-row">
+      <span class="muted">© <span id="year"></span> Fucking Rich Coin. All rights reserved.</span>
+      <div style="display:flex; gap:14px; align-items:center">
+        <a href="https://x.com/frichcoin" target="_blank" rel="noreferrer" class="muted">X</a>
+        <a href="https://t.me/fuckingrichcoin" target="_blank" rel="noreferrer" class="muted">Telegram</a>
+        <a href="#home" class="muted">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
